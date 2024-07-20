@@ -1,5 +1,35 @@
 # RTOS the What? and the Why?
 
+```markdown
+    Time
+    |
+    |
+    |    Running Task A
+    |------------------------------------------------------
+    |                    ^     ^     ^
+    |                    |     |     |
+    |                    |     |     |
+    |                    Interrupt Occurs
+    |    Task Switch    / \  / \  / \ 
+    |-------------------\ /  \ /  \ /----------------------
+    |                     \    /    /
+    |                      \  /    /
+    |                      Interrupt Service Routine (ISR)
+    |------------------------------------------------------
+    |    Task Switch      / \  / \  / \
+    |--------------------\ /  \ /  \ /----------------------
+    |                     /    \    \
+    |                    /      \    \
+    |                    \______|     \
+    |                             |    \
+    |    Running Task B           |     \    
+    |------------------------------------------------------
+                      ^          ^
+                      |          |
+             Interrupt Latency   Task Switch Latency
+```
+
+
 In this little series we are going to explore, Real-Time Operating systems, how 
 they work, and when to use them. 
 
