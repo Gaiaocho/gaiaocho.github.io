@@ -18,7 +18,9 @@ youtube_username: "@Gaiaochos"
 #########################################################################################
 ######### Nothing below needs to be changed (unless you know what you're doing) #########
 #########################################################################################
-theme: "minima"
+#theme: "minima"
+
+remote_theme: jekyll/minima
 
 rss: rss
 
@@ -29,6 +31,10 @@ kramdown:
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-remote-theme
+
+minima: 
+  skin: dark
 
 titles_from_headings:
   strip_title: true
