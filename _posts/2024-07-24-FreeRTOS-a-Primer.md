@@ -165,7 +165,7 @@ defined, with the name of the macro being in upper case. Again some examples.
 
 ## Where Next?
 With this information one should be able to examine a FreeRTOS based application 
-and identify which files are application specific as well as libray ones. Additionally
+and identify which files are application specific as well as library ones. Additionally
 when looking through the source one can use the schemes described above to understand 
 the particular elements, where they are from and what they return.
 
