@@ -2,8 +2,8 @@
 
 A runbook on how to deal with Heap memory allocation with FreeRTOS. FreeRTOS 
 checks `config_SUPPORT_DYNAMIC_ALLOCATION`. If this value is undefined or set to
-the value of 1, FreeRTOS needs a heap allocation scheme to be includes. Usually 
-one would choose between `heap_1.c` through `heap_5.c` additionally we can 
+the value of 1, FreeRTOS needs a heap allocation scheme to be included. Usually 
+one would choose between `heap_1.c` through `heap_5.c` additionally we can provide  
 our own [heap allocation implementation](https://www.freertos.org/Static_Vs_Dynamic_Memory_Allocation.html).
 
 
