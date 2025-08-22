@@ -8,6 +8,11 @@ The nRF52840 Dongle is a small, low-cost USB dongle for Bluetooth® Low
 Energy (LE), Bluetooth mesh, Thread, Zigbee, 802.15.4, ANT and 2.4 GHz
 proprietary applications using the nRF52840 SoC.
 
+[![A video of the following walkthrough is at]
+(https://img.youtube.com/vi/X3B8A4_wrXU/maxresdefault.jpg)]
+(https://youtube.com/live/X3B8A4_wrxU)
+
+
 ### Notable Features
 - Uses the Bluetooth 5 specification, improving long range support 
 up to x4 and doubling on-air data rate to 2Mbps
@@ -17,7 +22,7 @@ which is a low rate personal area network.
 secure and faster with a lower power budget. Which should make encrypted operations 
 such as network and firmware verification faster and cheaper.
 - Supports  OTA-DFU for field updates
-- Core M4 running up t0 64 MHz with a FPU and DSP extensions
+- Core M4 running up to 64 MHz with FPU and DSP extensions
 - Support 8 and 16 bit SIMD instructions 
 - XIP is possible with a wait state that can be optimized by caching.
 - Secure Boot support further enhanced by the crypto accelerator aforementioned 
@@ -32,17 +37,18 @@ such as network and firmware verification faster and cheaper.
 
 
 
+
 ### Power States & Wake Capacity
 Comes with a Power Management Unit designed to ensure maximum power efficacy. 
  
 The PMU automatically detects which components need power and clock at any time, 
 using this information it will stop and start components to save power. 
 
-* The PMU makes it hard to measure consumption, since it is always tuning the device. 
+- `The PMU makes it hard to measure consumption, since it is always tuning the device.` 
 - Normal Voltage mode if supply to VDD and VDDH exists, with only VDDH it enters high voltage mode.
-- On  chip regulators
+- On chip regulators for power.
 - Analog and digital wake up pins
-- ARM Power States
+- ARM Power States System_ON:(const latency, low power), System_OFF.
 - Up to 0.4&micro;A in system OFF 
 - Up to 1.5&micro;A in system ON
 - 15 level low-power comparator with wake-up from system off 
@@ -50,9 +56,10 @@ using this information it will stop and start components to save power.
 - RTC Wake-on
 - Wake in Debug Interface mode
 
-Most of this can be controlled from the RESETREAS register.
+Most of this can be controlled from the `RESETREAS` register.
 
 #### Wake Up Sources
+These are the various ways the system can come out of a low power mode.
 
 - WIC wake up interrupt controller. 
 - Analog or digital wake up pin in the power supply system.
@@ -61,12 +68,12 @@ System OFF mode, this also functions as an analog wake up source.
 - NFCDT near field communication field detect can also be used as a wake up source. 
 
 ### Radio System & BLE
-The 2.4GHz Radio rx is compatible with multiple standards such as 1Mbps, 2Mbps and
+The 2.4GHz Radio transceiver is compatible with multiple standards such as 1Mbps, 2Mbps and
 Long Range BLE, including IEEC 802.15.4 and Nordic's proprietary 1 & 2 Mbps modes. 
 
 - Multi domain transceiver. 
 - Low link budget plus low power operation
-- EasyDMA support makes it efficient at data interfacing say from `PDM -> RADIO -> External`
+- EasyDMA & PPI support makes it efficient at data interfacing say from `PDM -> RADIO -> External`
 - Automatic address filtering and pattern matching, this makes it easy to whitelist addresses
 and simplifies inter frame spacing. i.e it sort of has a known list of addresses and takes care of 
 timing to the CPU has less work. 
