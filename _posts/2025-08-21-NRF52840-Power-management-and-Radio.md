@@ -8,9 +8,7 @@ The nRF52840 Dongle is a small, low-cost USB dongle for Bluetooth® Low
 Energy (LE), Bluetooth mesh, Thread, Zigbee, 802.15.4, ANT and 2.4 GHz
 proprietary applications using the nRF52840 SoC.
 
-[![A video of the following walkthrough is at]
-(https://img.youtube.com/vi/X3B8A4_wrXU/maxresdefault.jpg)]
-(https://youtube.com/live/X3B8A4_wrxU)
+[A video of the following walkthrough is at](https://youtube.com/live/X3B8A4_wrxU)
 
 
 ### Notable Features
