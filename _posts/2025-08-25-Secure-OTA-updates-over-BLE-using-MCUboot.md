@@ -29,11 +29,11 @@ with special permissons really](https://github.com/zacck/stm32f4_uart_bootloader
 - After building we will have a binaries in the usual zephyr build folder.
 - We can then flash the bootloader to the device. 
 
+
 #### Building applications for MCUboot. 
 - Along with the flash modifications we need to configure apps for MCUboot. 
 - This is handled internally by zephyr using [CONFIG_BOOTLOADER_MCUBOOT](https://docs.zephyrproject.org/latest/kconfig.html#CONFIG_BOOTLOADER_MCUBOOT)
 - Checkout [sysbuild in Zephyr](https://docs.zephyrproject.org/latest/samples/sysbuild/with_mcuboot/README.html)
-
 
 #### Signing Applications
 - A customary step in the bootloader is to check the [checksum of the application](https://github.com/zacck/stm32f4_uart_bootloader_app/blob/1cbbf9fd524b34892fb7f42df651e216e6ac3ae9/Core/Src/main.c#L151) additionally along with verification we can and should sign applications with keys which MCUboot requires. 
@@ -78,8 +78,10 @@ Image upload
 - `CONFIG_MCUBOOT`: signifies that the target uses MCUboot.
 - `CONFIG_IMG_MANAGER`: enables DFU image management in zephyr.
 - `CONFIG_MCUMGR`: enables mcumgr library that provides DFU
-- `CONFIG_MCUMGR_TRANSPORT_BT`: Enables BLE transport for mcumgr.i
-
+- `CONFIG_MCUMGR_TRANSPORT_BT`: Enables BLE transport for mcumgr.
+when using sysbuild we add conf file for it `sysbuild.conf`
+`SB_CONFIG_BOOTLOADER_MCUBOOT` allows us to build our application with MCUboot in one go.
+- this negates the need to build separately and the need for `CONFIG_MCUBOOT` in our .conf 
 
 #### CODE
 - Adding OTAtep-by-step plan for adding OTA to your project:
@@ -95,9 +97,14 @@ Image upload
   mcumgr --conntype ble --connstring ctlr_name=hci0,peer_id=XX:XX:XX:XX:XX:XX image list
 
   # upload
-  mcumgr --conntype ble --connstring ctlr_name=hci0,peer_id=XX:XX:XX:XX:XX:XX image upload  \
+  mcumgr --conntype ble --connstring ctlr_name=hci0,peer_id=XX:XX:XX:XX:XX:XX image upload \  
   build/zephyr/zephyr.signed.bin
   
+  ```
+  
+  Then to test and reset
+
+  ```
   mcumgr image test <hash>
 
   mcumgr reset
