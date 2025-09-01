@@ -18,8 +18,7 @@ youtube_username: "@Gaiaochos"
 #########################################################################################
 ######### Nothing below needs to be changed (unless you know what you're doing) #########
 #########################################################################################
-#theme: "minima"
-remote_theme: wbadart/jekyll-theme-dark-minimal
+theme: "minima"
 
 
 rss: rss
@@ -28,7 +27,6 @@ rss: rss
 plugins:
   - jekyll-feed
   - jekyll-sitemap
-  - jekyll-remote-theme
 
 
 titles_from_headings:
