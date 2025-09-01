@@ -21,6 +21,7 @@ or  `S32_LE`, the LE here is little Endian.
 - Our detection window will be 256  samples, each sample will have 3 bytes 
 (this fits into our 2 bit  format above) 
 - At our sample rate of 44Khz that means a 5.8ms window or 172 times per a second
+
 `time per sample = 1/sample_rate ~~ 1/44Khz`
 `window_time = samples/sample_rate ~~ 256/44100` 
 for faster detection we can use a smaller window, for richer detection we can use 
@@ -94,4 +95,9 @@ a bigger window.
 
 **Outcome:**  
 We have a structured approach to implement amplitude threshold-based sound detection in our I²S application, including where to integrate it, how to measure amplitude, and how to test and tune it.
+ 
+---
+
+References 
+[Zephyr Device Tree](https://docs.zephyrproject.org/latest/build/dts/index.html)
 
