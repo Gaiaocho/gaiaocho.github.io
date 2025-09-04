@@ -90,7 +90,9 @@ by scaling it down using the following formula
 
 If the frequency \( f \) is 2 Hz, the period \( T \) is:
 
-\[ T = \frac{1}{2 \text{ Hz}} = 0.5 \text{ seconds} \]
+$$
+T = \frac{1}{2 \text{ Hz}} = 0.5 \text{ seconds}
+$$
 
 This means that each cycle takes 0.5 seconds to complete.
 
