@@ -52,9 +52,12 @@ H(f) =
 $$
 
 Now that we have a frequency response we can apply an inverse Fourier tranform to it 
-so that we obtain our impulse response. The formula for this is. 
+so that we obtain our impulse response. The formula for this is.
 
-$h(t) = \int_{-\infty}^{\infty} H(f) \, \bigl[e^{j 2 \pi f t} \bigr] \, df$
+$$
+h(t) = \int_{-\infty}^{\infty} H(f) \, \bigl[e^{j 2 \pi f t} \bigr] \, df
+$$
+
 
 This may look arcane, it is not. What it is saying is we are applying a 
 formula (Inverse Fourier Tranform ) to small values from negative infinity to 
@@ -88,7 +91,7 @@ These discontinuties that we just encountered, actually bring us right to the ne
 A windowing function is a `smoothing`, what this enables us to do is basically smooth out the side
 lobs by multiplying it to the frequency response
 
-And hence we have `Sliding Window FIR filter!`
+And hence we have `Windowed FIR filter!`
 
 ##### Key Factors when Designing Filters
 - Sampling Frequency
