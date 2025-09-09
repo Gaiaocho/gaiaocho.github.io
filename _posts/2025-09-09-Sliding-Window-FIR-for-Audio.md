@@ -104,6 +104,7 @@ And hence we have `Sliding Window FIR filter!`
 
 ## References 
 
+[SO Question](https://dsp.stackexchange.com/questions/76449/how-would-i-approach-implementing-a-windowed-sinc-filter-with-changing-cutoff-in)
 [Sinc Function](https://www.geeksforgeeks.org/electrical-engineering/sinc-function/)
 [Low Pass Filter](https://en.wikipedia.org/wiki/Low-pass_filter)
 [Phils Labs](https://www.youtube.com/watch?v=uNNNj9AZisM)
