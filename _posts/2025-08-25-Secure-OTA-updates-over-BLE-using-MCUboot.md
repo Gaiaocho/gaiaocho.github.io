@@ -4,12 +4,12 @@
 - Started out as the bootloader for Mynewt and Apache RTOS. 
 
 To use MCUBoot we need the following partitions
-    a) boot_partition: for MCUboot
+    - boot_partition: for MCUboot
         How to add partitions over DTS?
-    b) slot0_partition: the primary slot of image 0 
-    c) slot1_partition: the secondary slot of image 0
- Although it is not recommended one can perform swap-using-scratch using 
-    d) scratch_partion: the scratch slot
+    - slot0_partition: the primary slot of image 0 
+    - slot1_partition: the secondary slot of image 0
+        Although it is not recommended one can perform swap-using-scratch using 
+    - scratch_partion: the scratch slot
 
 - Image slots 0 & 1 need to be contigous.
 - If we are using MCUboot as the first stage BL then, the MCU must be 
@@ -54,9 +54,9 @@ the bootloader should perform an upgrade.
 Summarily
 1. MCUboot will boot first and verify the integrity and authenticity of the image in the primary slot.
 2. If it detects a valid new image in the secondary slot, 
-    a) using trailer flags `IMAGE_OK`, `COPY_DONE`,`BOOT_PENDING`
-    b) It may compare versions
-    c) If the secondary image is valid and is in `BOOT_PENDING` it is made read for swap
+    - using trailer flags `IMAGE_OK`, `COPY_DONE`,`BOOT_PENDING`
+    - It may compare versions
+    - If the secondary image is valid and is in `BOOT_PENDING` it is made read for swap
     Zephyr's DFU subsystem  manages the trailer flads for us this is [MCUmgr](https://docs.zephyrproject.org/latest/services/device_mgmt/mcumgr.html)
 3. Also see [swap using scratch](https://docs.mcuboot.com/readme-zephyr.html)
 
@@ -88,8 +88,8 @@ when using sysbuild we add conf file for it `sysbuild.conf`
   1. Enable MCUboot and mcumgr in `prj.conf`.
   2. Build and flash the bootloader.
   3. Add SMP service over BLE in your app.
-        a) include `#include <mgmt/mcumgr/smp_bt.h>`
-        b) after ble init call `smp_bt_register()` before we advertise
+        - include `#include <mgmt/mcumgr/smp_bt.h>`
+        - after ble init call `smp_bt_register()` before we advertise
   4. Test uploading a new image with `mcumgr`
   - connect and upload
   ```sh
