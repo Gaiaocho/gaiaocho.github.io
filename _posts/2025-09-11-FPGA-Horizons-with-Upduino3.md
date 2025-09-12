@@ -63,13 +63,17 @@ using this as a counter and incrementing it with every clock cycle.
 The next line looks very cryptic but luckily it is not 
 
 SB_HFOSC        - this is the high frequency oscillator primitive 
+
 u_SB_HFOSC      - this is a name that we assign he oscillator 
+
 .CLKHFPU(1'b1)  - here we are powering on the oscilator
+
 .CLKHFEN(1'b1)  - this enables our oscillator
+
 .CLKHF(int_osc) - connects the oscillators clock output to `int_osc wire`
 
 In short this says, we have an oscillator of type `SB_HFOSC` name it `u_SB_HFOSC` 
-power it up, enable it and connect it output to `int_osc`. 
+power it up, enable it and connect it's output to `int_osc`. 
 
 
 ## First Bit of Magic!
@@ -93,8 +97,11 @@ that this increments the counter at every cycle of the loop.
 What we have here is known as a binary counter and it basicall does something along the lines of 
 
 Bit 0 toggles every clock cyle 
+
 Bit 1 toggles every 2 cycles 
+
 ...
+
 Bit 27 toggles every 2^27 Cycles 
 
 As we go higher in bits the clock take longer to toggle and this enables us to create visible effect 
