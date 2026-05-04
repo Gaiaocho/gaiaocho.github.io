@@ -18,7 +18,9 @@ youtube_username: "@Gaiaochos"
 #########################################################################################
 ######### Nothing below needs to be changed (unless you know what you're doing) #########
 #########################################################################################
-theme: "minima"
+#
+# I do, thank you :)
+remote-theme: "mmistakes/minimal-mistakes@4.28.0"
 
 
 rss: rss
@@ -27,6 +29,7 @@ rss: rss
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-include-cache
 
 
 titles_from_headings:
@@ -36,6 +39,6 @@ titles_from_headings:
 defaults:
   - scope:
       path: ""
-      type: post
+      type: posts
     values:
       tags: Other
