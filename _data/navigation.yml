@@ -1,14 +1,12 @@
+# main links
 main:
-  - title: "Home"
-    url: https://gaiaochos.com
-  - title: "About"
-    url: https://gaiaochos.com
-  - title: "Services"
-    url: https://gaiaochos.com
-  - title: "Contact Us"
-    url: https://gaiaochos.com
-  - title: "Products"
-    url: https://gaiaochos.com
-
-
-  
+  - title: "Quick-Start Guide"
+    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  # - title: "About"
+  #   url: https://mmistakes.github.io/minimal-mistakes/about/
+  # - title: "Sample Posts"
+  #   url: /year-archive/
+  # - title: "Sample Collections"
+  #   url: /collection-archive/
+  # - title: "Sitemap"
+  #   url: /sitemap/
