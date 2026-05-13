@@ -78,7 +78,7 @@ author:
 #  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Mostly Debugging"
   location         : "Capetown, South Africa"
-  email            : "engineering@gaiaochos.com"
+  email            : "zacck@gaiaochos.com"
   # fediverse      : "@you@instance.social"  # used for fediverse:creator meta tag
   links:
     - label: "Email"
